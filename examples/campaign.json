@@ -1,0 +1,99 @@
+{
+  "id": "campaign-riverfront",
+  "worldSeed": 77,
+  "currentTick": 4820,
+  "factions": [
+    {
+      "id": "thornwall_militia",
+      "name": "Thornwall Militia",
+      "memberEntityIds": [1, 2, 3],
+      "tags": ["fortress", "frontier", "military"]
+    },
+    {
+      "id": "river_traders",
+      "name": "River Traders",
+      "memberEntityIds": [4, 5, 6],
+      "tags": ["mercantile", "river", "cosmopolitan"]
+    },
+    {
+      "id": "ashen_cloister",
+      "name": "Ashen Cloister",
+      "memberEntityIds": [7, 8],
+      "tags": ["scholarly", "ritual", "insular"]
+    }
+  ],
+  "entities": [
+    { "id": 1, "name": "Captain Elra", "factionId": "thornwall_militia", "attributes": { "cognition": { "linguistic": 0.61 } } },
+    { "id": 2, "name": "Quartermaster Hedd", "factionId": "thornwall_militia", "attributes": { "cognition": { "linguistic": 0.48 } } },
+    { "id": 3, "name": "Watcher Sen", "factionId": "thornwall_militia", "attributes": { "cognition": { "linguistic": 0.55 } } },
+    { "id": 4, "name": "Barge-Mother Ruun", "factionId": "river_traders", "attributes": { "cognition": { "linguistic": 0.77 } } },
+    { "id": 5, "name": "Ledger-Singer Pava", "factionId": "river_traders", "attributes": { "cognition": { "linguistic": 0.72 } } },
+    { "id": 6, "name": "Pilot Enko", "factionId": "river_traders", "attributes": { "cognition": { "linguistic": 0.66 } } },
+    { "id": 7, "name": "Archivist Maelor", "factionId": "ashen_cloister", "attributes": { "cognition": { "linguistic": 0.84 } } },
+    { "id": 8, "name": "Votary Isk", "factionId": "ashen_cloister", "attributes": { "cognition": { "linguistic": 0.79 } } }
+  ],
+  "contactPairs": [
+    { "factionAId": "thornwall_militia", "factionBId": "river_traders", "contactTicks": 2100, "tradeTicks": 1700, "conflictTicks": 140, "sharedBorder": 3 },
+    { "factionAId": "thornwall_militia", "factionBId": "ashen_cloister", "contactTicks": 740, "tradeTicks": 120, "conflictTicks": 260, "sharedBorder": 1 },
+    { "factionAId": "river_traders", "factionBId": "ashen_cloister", "contactTicks": 980, "tradeTicks": 540, "conflictTicks": 40, "sharedBorder": 1 }
+  ],
+  "standingHistory": [
+    {
+      "factionAId": "thornwall_militia",
+      "factionBId": "river_traders",
+      "samples": [
+        { "tick": 1200, "standing": 0.58 },
+        { "tick": 2500, "standing": 0.72 },
+        { "tick": 4700, "standing": 0.69 }
+      ]
+    },
+    {
+      "factionAId": "thornwall_militia",
+      "factionBId": "ashen_cloister",
+      "samples": [
+        { "tick": 1800, "standing": 0.41 },
+        { "tick": 3200, "standing": 0.36 },
+        { "tick": 4700, "standing": 0.39 }
+      ]
+    },
+    {
+      "factionAId": "river_traders",
+      "factionBId": "ashen_cloister",
+      "samples": [
+        { "tick": 1600, "standing": 0.52 },
+        { "tick": 3000, "standing": 0.56 },
+        { "tick": 4700, "standing": 0.61 }
+      ]
+    }
+  ],
+  "mythEvents": [
+    {
+      "id": "myth-bridge-oath",
+      "theme": "siege_oath",
+      "summary": "The oath sworn on the black bridge before the flood-gates opened.",
+      "tick": 4520,
+      "participantFactionIds": ["thornwall_militia", "river_traders"]
+    },
+    {
+      "id": "myth-ledger-flame",
+      "theme": "reckoning_fire",
+      "summary": "A merchant ledger burned and its ashes were read as prophecy.",
+      "tick": 4110,
+      "participantFactionIds": ["river_traders", "ashen_cloister"]
+    },
+    {
+      "id": "myth-silent-bell",
+      "theme": "forbidden_name",
+      "summary": "The cloister bell that rang without sound after a traitor's burial.",
+      "tick": 4385,
+      "participantFactionIds": ["ashen_cloister"]
+    },
+    {
+      "id": "myth-mud-crown",
+      "theme": "river_coronation",
+      "summary": "A captain crowned in river-mud to bind fortress and flotilla.",
+      "tick": 4760,
+      "participantFactionIds": ["thornwall_militia", "river_traders"]
+    }
+  ]
+}

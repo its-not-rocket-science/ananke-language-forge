@@ -193,14 +193,17 @@ cp /path/to/my-campaign-export.json examples/campaign.json
 cp .env.example .env
 # Edit .env: set LANGUAGE_FORGE_PROVIDER=openai and LANGUAGE_FORGE_API_KEY=sk-...
 
-# 5. Run
+# 5. Preview the derived context and prompt without calling an LLM
+npm run forge -- --input examples/campaign.json --dry-run
+
+# 6. Run against an LLM provider
 npm run forge -- --input examples/campaign.json --output examples/language-package.json
 
-# 6. Inspect output
+# 7. Inspect output
 cat examples/language-package.json | npx jq '.factionVocabulary[0]'
 ```
 
-A minimal example campaign export is included in `examples/` so you can try the forge without running Ananke.
+A minimal example campaign export and a sample language package are included in `examples/` so you can try the forge without running Ananke.
 
 ---
 
@@ -216,8 +219,7 @@ ananke-language-forge/
 │   ├── LLMClient.ts                 Pluggable provider interface
 │   ├── providers/
 │   │   ├── OpenAIProvider.ts
-│   │   ├── AnthropicProvider.ts
-│   │   └── LocalProvider.ts         OpenAI-compatible API (Ollama etc.)
+│   │   └── AnthropicProvider.ts
 │   ├── OutputParser.ts              Structured JSON extraction from LLM output
 │   └── types.ts                     LanguagePackage, LanguageContext types
 │
@@ -257,6 +259,16 @@ LANGUAGE_FORGE_API_KEY=ollama
 ---
 
 ## Output format
+
+The CLI emits a `LanguagePackage` JSON document with these top-level fields:
+
+- `languageFamilyTree.protoLanguages[]` — inferred proto-language clusters.
+- `factionVocabulary[]` — greetings, phonology, grammar notes, oral-tradition excerpt, and vocabulary per faction.
+- `grammarComplexityScores{}` — builder-derived numeric complexity signal per faction.
+- `loanWordContaminationIndex{}` — per-pair borrowing estimate.
+- `promptMetadata` — provider/model used for generation.
+
+When you want to inspect the inferred context and generated prompt before spending tokens, use `--dry-run`.
 
 The forge produces a single `LanguagePackage` JSON file. The schema is defined in `src/types.ts` and exported so downstream tools can import it as a TypeScript type.
 

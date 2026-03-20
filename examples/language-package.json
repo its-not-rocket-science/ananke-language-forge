@@ -1,0 +1,97 @@
+{
+  "campaignId": "campaign-riverfront",
+  "generatedAt": "2026-03-20T00:00:00.000Z",
+  "languageFamilyTree": {
+    "protoLanguages": [
+      {
+        "id": "proto_1",
+        "name": "Proto-Thornwall-River Tongue",
+        "memberFactionIds": ["thornwall_militia", "river_traders", "ashen_cloister"],
+        "divergenceDepth": 3,
+        "centralThemes": ["siege_oath", "reckoning_fire", "forbidden_name", "river_coronation"]
+      }
+    ]
+  },
+  "factionVocabulary": [
+    {
+      "factionId": "thornwall_militia",
+      "factionName": "Thornwall Militia",
+      "greeting": "Var ek thorn.",
+      "phonologyProfile": [
+        "Hard clustered consonants at the start of martial words.",
+        "Short vowels in commands, longer vowels in oath language.",
+        "Borrowed river terms soften with a final -a or -en."
+      ],
+      "grammarNotes": [
+        "Imperatives often omit pronouns entirely.",
+        "Oaths use doubled verbs for emphasis during military ritual.",
+        "Enemy names attract clipped, contemptuous suffixes."
+      ],
+      "oralTraditionExcerpt": "The watchfires of Thornwall are said to speak before the sentries do. A recruit learns first the words for stone, gate, ash, and oath, because a wall survives only while its people name the things they must hold. In river season the captains borrow trader words for ropes, dyes, and hulls, but when the horns sound they return to the old clipped tongue, the one that strikes like iron on iron and leaves no breath to waste.",
+      "vocabulary": [
+        { "word": "vratek", "meaning": "siege engine", "etymology": "Formed from a River Trader machine-word and a Thornwall war-tool suffix.", "usageNote": "Used proudly in campaign reports." },
+        { "word": "thornmark", "meaning": "oath scar", "etymology": "Named for the ritual cuts made after the black-bridge oath.", "usageNote": "Ceremonial and intimate." },
+        { "word": "shelven", "meaning": "river ally", "etymology": "A softened frontier borrowing for a trusted barge companion." },
+        { "word": "cloister-ash", "meaning": "suspect counsel", "etymology": "A hostile metaphor linking scholarship with smoke and concealment.", "usageNote": "Borderline insulting." }
+      ]
+    },
+    {
+      "factionId": "river_traders",
+      "factionName": "River Traders",
+      "greeting": "Velora, current keep you.",
+      "phonologyProfile": [
+        "Liquid consonants and open vowels dominate trade speech.",
+        "Ledger chants favor internal rhyme and repeated river imagery.",
+        "Loanwords are preserved more faithfully than in neighboring dialects."
+      ],
+      "grammarNotes": [
+        "Politeness is marked through sentence-final particles rather than titles.",
+        "Commercial speech uses exact classifier words for cargo, debt, and favor.",
+        "Stories often pivot from first-person witness to communal proverb."
+      ],
+      "oralTraditionExcerpt": "Among the River Traders, a promise is never merely spoken; it is poled forward like a barge and judged by whether it reaches the next lantern before dawn. Their songs count debts, storms, and marriages in the same meter, because all are crossings. Fortress terms drift into their speech whenever soldiers and ferrymen share winter fires, but the traders file those rough edges smooth, turning barked commands into bargain phrases that can travel from quay to quay without starting a knife-fight.",
+      "vocabulary": [
+        { "word": "velora", "meaning": "blessing of safe current", "etymology": "An old river benediction widened into a general greeting." },
+        { "word": "ashreckon", "meaning": "to make a risky bargain from bad omens", "etymology": "Born from the legend of the burning ledger read in ash." },
+        { "word": "mudcrown", "meaning": "leader raised by common consent", "etymology": "Directly tied to the river-coronation myth." },
+        { "word": "thornfare", "meaning": "military escort tariff", "etymology": "A trade term coined after repeated convoys with Thornwall guards.", "usageNote": "Practical, not flattering." }
+      ]
+    },
+    {
+      "factionId": "ashen_cloister",
+      "factionName": "Ashen Cloister",
+      "greeting": "In the ember of the true name.",
+      "phonologyProfile": [
+        "Measured consonants with deliberate pauses between sacred roots.",
+        "Long vowels lengthen further in liturgical recitation.",
+        "Forbidden names are replaced by aspirated gaps or bell-like hums."
+      ],
+      "grammarNotes": [
+        "Formal clauses nest heavily, mirroring scholastic commentary.",
+        "Sacred discourse distinguishes spoken names from withheld names through case marking.",
+        "Borrowed merchant words are often recast into abstract nouns."
+      ],
+      "oralTraditionExcerpt": "The Ashen Cloister teaches that every name leaves soot upon the tongue, and that careless speech blackens the soul faster than fire blackens stone. Its monks keep long, spiraled sentences in which each clause shelters the next, as if meaning must be escorted inward by ritual lamps. They listen to the river peoples and the wall captains, yet what they borrow is never left common for long; it is refined, filed into doctrine, and returned as a word that sounds older than the speaker who coined it.",
+      "vocabulary": [
+        { "word": "nemorath", "meaning": "the hidden core of a true name", "etymology": "Derived from cloister teaching on forbidden names and sacred identity." },
+        { "word": "bellsilence", "meaning": "a warning understood without speech", "etymology": "Coined from the myth of the bell that rang without sound." },
+        { "word": "reckon-ember", "meaning": "memory preserved through destruction", "etymology": "Adapted from River Trader fire-prophecy language into a doctrinal abstraction." },
+        { "word": "gate-errant", "meaning": "soldier led astray by blunt certainty", "etymology": "A scholarly critique of Thornwall militarized thinking.", "usageNote": "Sharply dismissive in debate." }
+      ]
+    }
+  ],
+  "grammarComplexityScores": {
+    "thornwall_militia": 31.7,
+    "river_traders": 38.6,
+    "ashen_cloister": 65.6
+  },
+  "loanWordContaminationIndex": {
+    "thornwall_militia:river_traders": 0.856,
+    "thornwall_militia:ashen_cloister": 0.236,
+    "river_traders:ashen_cloister": 0.481
+  },
+  "promptMetadata": {
+    "provider": "example",
+    "model": "hand-authored-sample"
+  }
+}
