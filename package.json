@@ -10,13 +10,15 @@
       "types": "./dist/index.d.ts"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "typecheck": "tsc --noEmit",
     "build": "tsc",
     "test": "vitest run",
-    "forge": "node dist/src/main.js",
-    "run:forge": "node dist/src/main.js"
+    "forge": "node dist/main.js",
+    "run:forge": "node dist/main.js"
   },
   "dependencies": {
     "@its-not-rocket-science/ananke": "^0.1.4",
