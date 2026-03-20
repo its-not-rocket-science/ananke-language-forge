@@ -12,12 +12,14 @@
   },
   "files": ["dist"],
   "scripts": {
+    "typecheck": "tsc --noEmit",
     "build": "tsc",
     "test": "vitest run",
-    "run:forge": "node dist/tools/forge.js"
+    "forge": "node dist/src/main.js",
+    "run:forge": "node dist/src/main.js"
   },
   "dependencies": {
-    "@its-not-rocket-science/ananke": "^0.1.1",
+    "@its-not-rocket-science/ananke": "^0.1.4",
     "@anthropic-ai/sdk": "^0.36.0"
   },
   "devDependencies": {
