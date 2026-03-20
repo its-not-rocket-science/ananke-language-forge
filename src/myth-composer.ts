@@ -5,7 +5,19 @@
 //
 // See ROADMAP.md Phase 3 for the full implementation plan.
 
-import type { StoryArc } from "@its-not-rocket-science/ananke";
+// StoryArc is a Tier 2 type from src/chronicle.ts (not in root barrel).
+// Defined inline here to avoid a deep dist-path import that may not resolve
+// across all module-resolution strategies.
+export interface StoryArc {
+  arcId: string;
+  arcType: string;
+  entryIds: string[];
+  primaryActors: number[];
+  startTick: number;
+  endTick?: number | undefined;
+  significance: number;
+  description: string;
+}
 
 export interface MythComposeOptions {
   /**

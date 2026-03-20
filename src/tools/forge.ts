@@ -6,7 +6,7 @@
 // Run with:
 //   npm run build && npm run run:forge
 
-import type { ChronicleEntry } from "@its-not-rocket-science/ananke";
+import type { ChronicleEntry } from "../chronicle-narrator.js";
 import { narrateChronicle } from "../chronicle-narrator.js";
 
 // ── Fixture data ──────────────────────────────────────────────────────────────

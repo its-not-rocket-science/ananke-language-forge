@@ -8,7 +8,21 @@
 //   const prose = await narrateChronicle(entries, { style: "epic", maxWords: 400 });
 
 import Anthropic from "@anthropic-ai/sdk";
-import type { ChronicleEntry } from "@its-not-rocket-science/ananke";
+// ChronicleEntry is a Tier 2 type from src/chronicle.ts (not in root barrel).
+// Defined inline here to avoid a deep dist-path import that may not resolve
+// across all module-resolution strategies.
+export interface ChronicleEntry {
+  entryId: string;
+  tick: number;
+  significance: number;
+  eventType: string;
+  actors: number[];
+  template: string;
+  variables: Record<string, string | number>;
+  rendered?: string | undefined;
+  settlementId?: string | undefined;
+  questId?: string | undefined;
+}
 
 export interface NarrateChronicleOptions {
   /**
